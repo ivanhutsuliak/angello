@@ -23,7 +23,7 @@ function ToolbarController($rootScope, $location) {
     function logout() {
         $rootScope.AuthService.signOut().then(() => {
             $rootScope.userLoggedIn = false;
-            $location.path('/auth'); //$state.go('/auth');
+            $location.path('/auth'); //or: $state.go('/auth');
         });
     }
 
