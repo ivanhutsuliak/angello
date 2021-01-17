@@ -13,8 +13,4 @@ function AppController($rootScope, $scope, $state, $location) {
         }
     });
 
-    /*document.addEventListener('mousedown', function(e) {
-
-    });*/
-
 }
