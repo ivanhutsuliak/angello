@@ -1,0 +1,31 @@
+<div layout="row" layout-fill="">
+    <md-toolbar class="bg-green">
+        <div class="md-toolbar-tools" flex="">
+            <div class="logo" flex="30">
+                <img src="../../../assets/img/angello.png" alt="angello logo" class="logo">
+            </div>
+            <div class="menu" flex="70" layout="row" layout-align="end">
+
+                <md-menu md-position-mode="target-right bottom" md-offset="0 8">
+                    <md-button class="md-fab md-mini md-primary-red md-hue-2"
+                               aria-label="Add Item"
+                               ng-click="$mdMenu.open()"
+                    >
+                        <i class="fa fa-plus"></i>
+                    </md-button>
+                    <md-menu-content width="3">
+                        <md-menu-item ng-repeat="item in toolbar.menuItems">
+                            <md-button ng-click="$emit(item.value)">
+                                {{item.title}}
+                            </md-button>
+                        </md-menu-item>
+                    </md-menu-content>
+                </md-menu>
+
+                <md-button ng-click="toolbar.logout()">
+                    Log Out
+                </md-button>
+            </div>
+        </div>
+    </md-toolbar>
+</div>
