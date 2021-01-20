@@ -25,8 +25,7 @@ function AuthController($rootScope, $scope, $state, $location) {
     auth.logout = logout;
     auth.changeAuthType = changeAuthType;
 
-    /*window.$rootScope = $rootScope; // temp
-    window.$scope = $scope; // temp*/
+
 
     function register(event) {
         event.preventDefault();
